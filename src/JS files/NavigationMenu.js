@@ -21,6 +21,10 @@ const NavigationMenu = () => {
         navigate('/firmware');
     }
 
+    const handlepushfota= () =>{
+        navigate('/pushfota');
+    }
+
     return(
         <div>
         <nav className="Nav-bar">
@@ -29,7 +33,7 @@ const NavigationMenu = () => {
          <ul>
         <li><FontAwesomeIcon icon={faHome}/>HOME</li>
         <li onClick={handleFirmware}>FIRMWARE</li>
-        <li>PUSHFOTA</li>
+        <li onClick={handlepushfota}>PUSHFOTA</li>
         <li onClick={handlelogout}><FontAwesomeIcon icon={faSignOutAlt}/>LOGOUT</li>
         
       </ul>

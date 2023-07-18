@@ -4,6 +4,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './../CSS files/slider.css'
 
 const Slider = ({slides}) => {
+
+  
+
   return (
     <Carousel>
       {slides.map((slide) => (

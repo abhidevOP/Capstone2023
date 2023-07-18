@@ -33,7 +33,7 @@ export default function Firmware({ items }) {
     setSelectedEnvironment(event.target.value);
   };
 
-  const handleSubmit = () => {
+  const handledownload = () => {
     // Implement your download logic here
   };
 
@@ -44,13 +44,13 @@ export default function Firmware({ items }) {
         <div className='header'>
             <Box sx={{minWidth: 200}}>
           <FormControl fullWidth>
-            <InputLabel className={classes.labelMargin} id="demo-simple-select-standard-label">Environment Select</InputLabel>
+          <InputLabel id="demo-simple-select-label">Environment Select</InputLabel>
             <Select
-              labelId="demo-simple-select-standard-label"
-              id="demo-simple-select-standard"
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
               value={selectedEnvironment}
+              label="Environmrnt Select"
               onChange={handleEnvironmentSelect}
-              className={classes.selectInput}
             >
               
               <MenuItem value="development">Development</MenuItem>
@@ -60,6 +60,8 @@ export default function Firmware({ items }) {
           </FormControl>
           </Box>
         </div>
+
+        
 
         <div style={{ width: '100%', maxWidth: '800px', height: '400px', overflow: 'auto' }}>
           <TableContainer component={Paper}>
@@ -96,7 +98,7 @@ export default function Firmware({ items }) {
           </TableContainer>
         </div>
 
-        <StyledButton variant="contained" sx={{ marginTop: 4, backgroundColor: '#0F3F34' }} onClick={handleSubmit}>
+        <StyledButton variant="contained" sx={{ marginTop: 3, backgroundColor: '#0F3F34' }} onClick={handledownload}>
           DOWNLOAD
         </StyledButton>
       </div>
